@@ -1,0 +1,416 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@800&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@800&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <style>
+    section.container {
+        width: 100%;
+        height: 100%;
+    }
+
+    section.content {
+        width: 75%;
+        height: 100%;
+        float: right;
+    }
+
+    article {
+       width: 100%;
+       padding-bottom: 100px;
+    }
+
+    .aside {
+      height: 100%;
+      width: 20%;
+      position: sticky;
+      z-index: 1;
+      bottom: 0;
+      background-color: #c3d6d9;
+      float: left;
+      padding-top: 40px;
+    } 
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .aside{
+    width: 100%;
+    height: 400px;
+  }
+}
+
+
+    .img_left {
+        float: left; 
+        max-width: 300px;  
+        padding-bottom: 15px;
+        padding-right: 20px;
+
+    }
+    .img_right {
+        float: right; 
+        max-width: 300px; 
+        padding-bottom: 15px;
+        padding-left: 20px;
+    }
+    @media screen and (max-width:600px) {
+     .img_left {
+        float: none;
+        padding-top: 40px ;
+     }
+    }
+    @media screen and (max-width:600px) {
+     .img_right {
+        float: none;
+     }
+    }
+    
+    h3 {
+        font-family:'Roboto', sans-serif;
+        font-size: 21px;
+        padding-bottom: 20px;
+      }
+
+    .underline {
+        position:relative;
+    }
+   
+    .underline:after {
+       content: "";
+       position: absolute;
+       bottom: -7px;/*position the underline using left and bottom property*/
+       left: 0;
+       width: 40px;/* adjust the width of underline as you like*/
+       border-bottom: 1px solid;/* adjust the underline width and color as you like*/
+    }
+
+    @media screen and (max-width:600px) {
+     .h3 {
+        font-size: 19px;
+        text-align: center;
+     }
+    }
+
+    .content {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        text-align: left;
+        word-spacing: 2px;
+        letter-spacing: 0.5px;
+        padding-right: 20px;
+    }
+    
+
+    .listText {
+        font-family: 'Roboto', sans-serif;
+        font-size: 19px;
+        list-style: circle;
+        line-height: 2em;
+     }
+     @media screen and (max-width:600px) {
+     .listText {
+        font-size: 19px;
+        list-style: circle;
+        line-height: 2em;
+     }
+    }
+    nav ul {
+      /* OR nav > ul --- ">" immediate after parent tag */
+      list-style: none;
+      margin: 0;
+    }
+
+    /* Ref: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after_style */
+    /* inserts something after the content */
+    /* if removed, the content of next tag will be right next to the nav bar */
+    nav ul::after {
+      /* OR nav > ul::after --- ">" immediate after parent tag */
+      content: "";
+      display: block;
+      clear: both;
+      /* The element is pushed below both left and right floated elements. Ref: https://www.w3schools.com/cssref/pr_class_clear.asp */
+    }
+
+    nav ul li a {
+      /* OR nav > ul > li > a --- ">" immediate after parent tag */
+      /* allows to set a width and height on the element, ref: https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1 */
+      display: inline-block;
+      color: black;
+      /* padding: top right bottom left */
+      padding: 10px 20px 10px 10px;
+      text-decoration: none;
+      width: auto;
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+    }
+
+    nav ul li a:hover {
+      color: #c3d6d9;
+    }
+
+    /* top level */
+    nav>ul>li {
+      float: left;
+      /* make nav item align hortizontally */
+    }
+
+    #navLogo {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    a.logo {
+      width: 110px;
+      height: 100px;
+      display: block;
+      background: url(./assets/images/logo.svg) no-repeat 0 0;
+      /* 0 0 are x,y coordination in relation to width and height setting */
+      background-size: contain;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #navLeft {
+      padding-left: 30px;
+    }
+
+    #navRight {
+      padding-right: 30px;
+    }
+
+    #navDropdown {
+      display: none;
+    }
+
+    .dropdown {
+      display: block;
+      left: 0;
+    }
+
+    .dropbtn {
+      background-color: white;
+      color: black;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      line-height: normal;
+      padding-left: 60px;
+    }
+
+    .dropbtn:hover {
+      color:#c3d6d9;
+    }
+
+    .dropdown-content {
+      display: none;
+      /* set display to none, so dropdown menu won't show till hover dropdown */
+      position: absolute;
+      background-color: #c3d6d9;
+      min-width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      /*z-index: 1;*/
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      font-size: 16pt;
+      font-family: 'Lato', sans-serif;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      line-height: normal;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #a7bdc1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover {
+      background-color: #a7bdc1;
+    }
+
+    @media screen and (max-width: 650px) {
+
+      #navLeft,
+      #navRight {
+        display: none;
+        /* hide the nav bar in small screen size */
+      }
+
+      #navDropdown {
+        display: block;
+        /* show dropdown menu and buttuon in small screen size */
+      }
+
+      .dropdown-content {
+        max-width: 650px;
+        /* set the dropdown-content width same as the @media screen width */
+      }
+
+      a.logo {
+        width: 90px;
+        height: 80px;
+        padding-left: 10px;
+      }
+    }
+    .footer {
+     width: 100%;
+     background-color: white;
+     color: black;
+     text-align: center;
+     height: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="flex-container">
+      <!-- horizontal left -->
+      <nav id="navLeft">
+        <ul style="padding-left: 20px;">
+          <li>
+            <a href="#" class="active">HOME</a>
+          </li>
+          <li>
+            <a href="#">ABOUT</a>
+          </li>
+          <li>
+            <a href="#">BLOG</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- dropdown-menu -->
+      <nav id="navDropdown">
+        <div class="dropdown">
+          <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
+          <div class="dropdown-content">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">BLOG</a>
+            <a href="#">SERVICES</a>
+            <a href="#">INVENTORY</a>
+            <a href="#">EXPERIENCE</a>
+          </div>
+        </div>
+      </nav>
+      <!-- center logo -->
+      <nav id="navLogo"><a class="logo" href="#"></a></nav>
+      <!-- horizontal right -->
+      <nav id="navRight">
+        <ul style="padding-left: 20px;">
+          <li>
+            <a href="#">SERVICES</a>
+          </li>
+          <li>
+            <a href="#">INVENTORY</a>
+          </li>
+          <li>
+            <a href="#">EXPERIENCE</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="container">
+      <div class="aside">
+        <h3 class style="padding-left: 30px"><span class="underline">services</span></h3>
+          <ul class="listText">
+            <li>safe moving and delivery</li>
+            <li>installation service</li>
+            <li>safe removal and disposal</li>
+            <li>safe rental</li>
+            <li>safe temporary storage</li>
+            <li>locksmith service</li>
+            <li>safe cracking</li>
+          </ul>
+      </div>  
+      <section class="content">
+        <article>
+          <img class="img_left" src="./assets/images/services/safemoving.jpg" alt="moving safe">
+          <h3 class><span class="underline">safe moving and delivery</span></h3>
+          <p class="content">Safes Guard is a well- equipped professional team that easily and neatly doing a fabulous job of transportation and installation safes with such tools: commercial 16th foot box truck with hydraulic tailgate, our custom designed high capacity hydraulic lift trailer ( rated for load more than 10,000 pounds ), Ultralift stair-climbers, variety of pallet-jacks, commercial suction cups, burt pry bars, slick sticks and more. So our customers can be sure of great accuracy in work. We guarantee to move your safe with utmost care and diligence.  
+             SafeGuards is known for professional, courteous and efficient service of moving safes. We understand customers' needs and solve all their concerns giving them workable solutions for their security requirements. Our team consists of professional workers with abundant experience in loading, moving, installing safes, fixing them on the floor or wall regardless of their size and weight, handling and bolting down the safes for residential and commercial accounts demonstrating integrity while at clients' home.
+             <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+             <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+             <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+          </p>
+        </article>
+        <article style="padding-top: 0px;">
+           <img class="img_right" src="./assets/images/services/installation.jpg" alt="installing safe">
+           <h3 class><span class="underline">installation service</span></h3>
+           <p class="content">We offer professional installation service over the whole Bay Area. Our well-trained workers can carefully install your safe without any material damage, fix it on the floor or wall regardless of their size and weight, level and bolt down them. If needed remove a safe door for more safety and precision, remove door handles and keypad to avoid breakage. California Safes team works together like a well oiled machine and always thinks how to satisfy its customers.
+               Our customers are very important to us and we try to meet their needs.
+               When you choose and purchase your ideal safe in our online safe store we can deliver it for you at any location over the whole Northern CA for additional charge ( San Francisco, San Jose, Oakland, Daly City, San Rafael, Santa Clara, Campbell, Cupertino, Sunnyvale, Los Gatos, Los Altos, Mountain View, Los Altos Hills, Palo Alto, Redwood City, Menlo Park, Woodside, Modesto, Santa Rosa, Novato, Sonoma, Concord, Lafayette, Richmond, Salinas, Walnut Creek, Berkeley, San Mateo, Fremont, Union City, Hayward, San Leandro, Castro Valley, Pleasanton, Dublin, Livermore, Tracy, Sacramento, Stockton, Antioch, Santa Cruz, Monterey, Hollister, Gilroy, Redding, Lake Tahoe and Yosemite Valley).
+               <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+               <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+            </p>
+        </article>
+        <article style="padding-top: 0px;">
+          <img class="img_left" src="./assets/images/services/saferemoval.jpg" alt="removing safe">
+          <h3 class><span class="underline">safe removal and disposal</span></h3>
+          <p class="content">If you have a broken safe or lost a combination to open a safe we will help you to free up space and remove your safe. Sometimes our customers face a desperate situation when they are short on time to the end of their lease and need a quick removal. Another situation when our client bought a house but the previous owner left a safe without a combination. We understand that and offer a quick professional disposal of your safe. 
+             <p class="content">If you have a broken safe or lost a combination to open a safe we will help you to free up space and remove your safe. Sometimes our customers face a desperate situation when they are short on time to the end of their lease and need a quick removal. Another situation when our client bought a house but the previous owner left a safe without a combination. We understand that and offer a quick professional disposal of your safe. </p>
+             <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+             <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+          </p>
+        </article>
+        <article style="padding-top:0px;">
+          <img class="img_right" src="./assets/images/services/saferental.jpg" alt="safe rental">
+          <h3 class><span class="underline">safe rental</span></h3>
+          <p class="content">San Francisco Bay Area is famous for its Marijuana & Cannabis Trade Shows, Jewelers and Gun Shows, Conventions and Exhibitions. And to be secured and certain that all your valuable equipment, guns or jewelry will rest safely, rent a safe that satisfies your needs. We offer different types of safes: Gun Safes, Commercial Safes, Data Safes, Weed Dispenser Safes for any requested period. Our team guarantees a timely delivery, careful installation, leveling and pick up upon request.</p>
+          <p class="content">We can keep your safe in a clean, dry  and safe place. Marijuana & Cannabis Trade Shows, Jewelers and Gun Shows, Conventions and Exhibitions. And to be secured and certain that all your valuable equipment, guns or jewelry will rest safely, rent a safe that satisfies your needs. We offer different types of safes: Gun Safes, Commercial Safes, Data Safes, Weed Dispenser Safes for any requested period. Our team guarantees a timely delivery, careful installation, leveling and pick up upon request.</p>
+          <p class="content"> You can trust us. And to be secured and certain that all your valuable equipment, guns or jewelry will rest safely, rent a safe that satisfies your needs. We offer different types of safes: Gun Safes, Commercial Safes, Data Safes, Weed Dispenser Safes for any requested period. Our team guarantees a timely delivery, careful installation, leveling and pick up upon request.</p>
+          <p class="content"> If you have a broken safe or lost a combination to open a safe we will help you to free up space and remove your safe. Sometimes our customers face a desperate situation when they are short on time to the end of their lease and need a quick removal. Another situation when our client bought a house but the previous owner left a safe without a combination. We understand that and offer a quick professional disposal of your safe.</p>
+        </article>
+        <article style="padding-top: 0px;">
+          <img class="img_left" src="./assets/images/services/temporarystorage.jpg" alt="safe rental">
+          <h3 class><span class="underline">safe temporary storage</span></h3>
+          <p class="content">We understand all our customers’ needs and are ready to solve the problems that you face when it’s about safes. If you relocate and do not have yet space for your old safe in your new house or your business is being shut down, or you are on a short time to the end of lease and need to take off the safe we would be glad to offer our storage to keep your safe till you need it again. Moreover, you started a renovation of your house but your safe is on your way and you don’t have any other spot for it. It’s easy to schedule with us your pick up time and then delivery time whenever you are ready to get your safe back.
+            Safe storing fee is $100 for up to 2 weeks of storage. After that a $100 fee will be charged for every additional month.</p>
+          <p class="content">We understand all our customers’ needs and are ready to solve the problems that you face when it’s about safes. If you relocate and do not have yet space for your old safe in your new house or your business is being shut down, or you are on a short time to the end of lease and need to take off the safe we would be glad to offer our storage to keep your safe till you need it again. Moreover, you started a renovation of your house but your safe is on your way and you don’t have any other spot for it. It’s easy to schedule with us your pick up time and then delivery time whenever you are ready to get your safe back.
+              Safe storing fee is $100 for up to 2 weeks of storage. After that a $100 fee will be charged for every additional month.</p>
+          <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+        </article>
+        <article style="padding-top: 0px;">
+          <img class="img_right" src="./assets/images/services/locksmith.jpg" alt="safe rental">
+          <h3 class><span class="underline">locksmith service</span></h3>
+          <p class="content">California Safes provides combination change and lock change service. We can replace the dial safe lock to electronic safe lock ( Sargent and Greenleaf digital keypad or LA GARD digital keypad ), switch electronic safe lock with a mechanical lock and install combination lock on your safe.If you’ve lost your combination and your lock has a serial number we can help you find instructions to reset the combination on your Set-Your-Own Combination Locks.Through this tutorial, it is easy to reset a safe combination lock. Changing safe combinations is required before using it to secure your valuables. These steps also work for sentry safe change dial combination.If you have a broken safe or lost a combination to open a safe we will help you to free up space and remove your safe. Sometimes our customers face a desperate situation when they are short on time to the end of their lease and need a quick removal. Another situation when our client bought a house but the previous owner left a safe without a combination. We understand that and offer a quick professional disposal of your safe. Our store or retail establishments, to store a range of different collectables and valuables.</p>
+          <p class="content">SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes, Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes, safes that use digital entry and safes that use mechanical entry, safes with heavy duty locking device or four pre-drilled anchor holes for your convenience that all come with a wide spectrum of dimensions and shapes, sizes and colors, functions and formats.</p>
+        </article>
+        <article style="padding-top: 0px;">
+          <img class="img_left" src="./assets/images/services/safecracking.jpg" alt="safe rental">
+          <h3 class><span class="underline">safe cracking</span></h3>
+          <p class="content">Lock manipulation is a damage-free combination recovery method and a well known surreptitious bypass technique. Manipulation only requires fingers, eyes, and proper technique, though it is a skill that takes years to develop. While manipulation of combination locks is usually performed on Group 2 locks, many Group 1 locks are susceptible to manipulation. It involves the manipulation of the lock in order to obtain the combination one number at a time.Manipulation procedures can vary, but they all rely on exploiting the presence of mechanical imperfections in the lock, unlocking the safe and recovering its combination, which can then be reused to open the safe lock.</p>
+          <p class="content">Mechanical safe locks are manipulated primarily by feel and vision, with sound helping the process occasionally. To find the combination the operator uses the lock against itself by measuring internal movements with the dial numbers. More sophisticated locks use advanced mechanics to reduce any feedback a technician could use to identify a combination. These group 1 locks were developed in response to group 2 lock manipulation. Wheels made from lightweight materials will reduce valuable sensory feedback, but are mainly used for improved resistance against radiographic attacks. Manipulation is often the preferred choice in lost-combination lockouts, since it requires no repairs or damage, but can be time consuming for an operator, the specific difficulty depends on the unique wheel shapes and where the gates rest in relation to them. A novice's opening time will be governed by these random inconsistencies, while some leading champions of this art show consistency. There are also a number of tools on the market to assist safe engineers in manipulating a combination lock open in the field.</p>
+          <p class="content">Nearly all combination locks allow some "slop" while entering a combination on the dial. On average 1% radial rotation in either direction from the center of the true combination number to allow the fence to fall despite slight deviation, so that for a given safe it may be necessary only to try a subset of the combinations. Such "slops" may allow for a margin of error of plus or minus two digits, which means that trying multiples of five would be sufficient in this case. This drastically reduces the time required to exhaust the number of meaningful combinations. A further reduction in solving time is obtained by trying all possible settings for the last wheel for a given setting of the first wheels before nudging the next-to-last wheel to its next meaningful setting, instead of zeroing the lock each time with a number of turns in one direction.</p>
+        </article>
+      </section>
+   </section> 
+  <div class="footer">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <p style="font-family:'Lato', san-serif;">408 987 5555 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; safeguards@gmail</p>
+  </div>
+</body>
+</html>

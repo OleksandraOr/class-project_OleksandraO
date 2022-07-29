@@ -1,0 +1,555 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@800&family=Roboto:wght@100;300&display=swap"
+    rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <title>Index Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 21px;
+    }
+
+    .content {
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      text-align: left;
+      word-spacing: 2px;
+      letter-spacing: 0.5px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    article {
+      float: left;
+    }
+
+    div.scrolling {
+      width: 550px;
+      height: 400px;
+      padding: 20px;
+      overflow: auto;
+      /* overflow is shortcut for overflow-y and overflow-x */
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #c3d6d9;
+      border-radius: 10px;
+    }
+
+    .container {
+      width: 820px;
+      height: 550px;
+      margin: auto;
+      float: right;
+      padding-right: 90px;
+    }
+
+    .slick-dots li button::before {
+      font-size: 12px;
+      color: #c3d6d9;
+      opacity: 50%;
+      padding-top: 15px;
+    }
+
+    .slick-dots li.slick-active button::before {
+      color: #c3d6d9;
+      opacity: 100%;
+    }
+
+    .slick-next:before,
+    .slick-prev:before {
+      color: #c3d6d9;
+      font-size: 40px;
+      opacity: 100%;
+    }
+    
+    .image-responsive {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .slick-list {
+      margin: 0 -5px;
+    }
+
+    .slick-slide {
+      padding: 0 15;
+      padding-left: 35px
+    }
+
+    .your-class div p {
+      margin: 5px 0 0;
+      text-align: center;
+    }
+    @media screen and (max-width:600px) {
+  .container{
+    width: 80%;
+    height: 30%;
+    padding-right: 60px;
+   
+  }
+}
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 21px;
+      padding-left: 60px;
+    }
+
+    .underline {
+      position: relative;
+    }
+
+    .underline:after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      /*position the underline using left and bottom property*/
+      left: 0;
+      width: 40px;
+      /* adjust the width of underline as you like*/
+      border-bottom: 1px solid;
+      /* adjust the underline width and color as you like*/
+    }
+
+    nav ul {
+      /* OR nav > ul --- ">" immediate after parent tag */
+      list-style: none;
+      margin: 0;
+    }
+
+    /* Ref: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after_style */
+    /* inserts something after the content */
+    /* if removed, the content of next tag will be right next to the nav bar */
+    nav ul::after {
+      /* OR nav > ul::after --- ">" immediate after parent tag */
+      content: "";
+      display: block;
+      clear: both;
+      /* The element is pushed below both left and right floated elements. Ref: https://www.w3schools.com/cssref/pr_class_clear.asp */
+    }
+
+    nav ul li a {
+      /* OR nav > ul > li > a --- ">" immediate after parent tag */
+      /* allows to set a width and height on the element, ref: https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1 */
+      display: inline-block;
+      color: black;
+      /* padding: top right bottom left */
+      padding: 10px 20px 10px 10px;
+      text-decoration: none;
+      width: auto;
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+    }
+
+    nav ul li a:hover {
+      color: #c3d6d9;
+    }
+
+    /* top level */
+    nav>ul>li {
+      float: left;
+      /* make nav item align hortizontally */
+    }
+
+    #navLogo {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    a.logo {
+      width: 110px;
+      height: 100px;
+      display: block;
+      background: url(./assets/images/logo.svg) no-repeat 0 0;
+      /* 0 0 are x,y coordination in relation to width and height setting */
+      background-size: contain;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #navLeft {
+      padding-left: 30px;
+    }
+
+    #navRight {
+      padding-right: 30px;
+    }
+
+    #navDropdown {
+      display: none;
+    }
+
+    .dropdown {
+      display: block;
+      left: 0;
+    }
+
+    .dropbtn {
+      background-color: white;
+      color: black;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      line-height: normal;
+      padding-left: 60px;
+    }
+
+    .dropbtn:hover {
+      color:#c3d6d9;
+    }
+
+    .dropdown-content {
+      display: none;
+      /* set display to none, so dropdown menu won't show till hover dropdown */
+      position: absolute;
+      background-color: #c3d6d9;
+      min-width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      /*z-index: 1;*/
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      font-size: 16pt;
+      font-family: 'Lato', sans-serif;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      line-height: normal;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #a7bdc1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover {
+      background-color: #a7bdc1;
+    }
+
+    @media screen and (max-width: 650px) {
+
+      #navLeft,
+      #navRight {
+        display: none;
+        /* hide the nav bar in small screen size */
+      }
+
+      #navDropdown {
+        display: block;
+        /* show dropdown menu and buttuon in small screen size */
+      }
+
+      .dropdown-content {
+        max-width: 650px;
+        /* set the dropdown-content width same as the @media screen width */
+      }
+
+      a.logo {
+        width: 90px;
+        height: 80px;
+        padding-left: 10px;
+      }
+    }
+    .footer {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     background-color: white;
+     color: black;
+     text-align: center;
+     height: 80px;
+     margin-top: 128px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="flex-container">
+      <!-- horizontal left -->
+      <nav id="navLeft">
+        <ul style="padding-left: 20px;">
+          <li>
+            <a href="#" class="active">HOME</a>
+          </li>
+          <li>
+            <a href="#">ABOUT</a>
+          </li>
+          <li>
+            <a href="#">BLOG</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- dropdown-menu -->
+      <nav id="navDropdown">
+        <div class="dropdown">
+          <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
+          <div class="dropdown-content">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">BLOG</a>
+            <a href="#">SERVICES</a>
+            <a href="#">INVENTORY</a>
+            <a href="#">EXPERIENCE</a>
+          </div>
+        </div>
+      </nav>
+      <!-- center logo -->
+      <nav id="navLogo"><a class="logo" href="#"></a></nav>
+      <!-- horizontal right -->
+      <nav id="navRight">
+        <ul style="padding-left: 20px;">
+          <li>
+            <a href="#">SERVICES</a>
+          </li>
+          <li>
+            <a href="#">INVENTORY</a>
+          </li>
+          <li>
+            <a href="#">EXPERIENCE</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <article>
+      <h3><span class="underline">our company</span></h3>
+      <div class="scrolling">
+        <p class="content">
+          SafeGuards was established by two brothers Kurguzov in June, 2017 but we have a wide experience of working
+          with
+          safes. Sergey Kurguzov, the owner of our company, has worked more than 5 years in this field developing and
+          enhancing skills everyday making more than 25 moves and installations in a week. We increase our orders every
+          month because we leave satisfied clients after our work. As a result, our customers hire us again in a
+          heartbeat
+          and recommend us to their friends, relatives and business partners on Yelp or Google.<br>
+          SafeGuards is known for professional, courteous and efficient service of moving safes. We understand
+          customers'
+          needs and solve all their concerns giving them workable solutions for their security requirements. Our team
+          consists of professional workers with abundant experience in loading, moving, installing safes, fixing them on
+          the floor or wall regardless of their size and weight, handling and bolting down the safes for residential and
+          commercial accounts demonstrating integrity while at clients' home.<br>
+          SafeGuards provides a commercial safes moving service including such brands as Standard Safe or Smart Safe
+          specially designed to dispense cash or validate bills, Gun Safe, Fire Resistant Safe, Environmental Resistant
+          Safe, Retail Rotary Hopper Safe, Mailbox Drop Safe, Drop Drawer Safe, Deposit Slot Safe, Floor and Wall Safes,
+          Under-counter Safe and Security Safe, Burglary-rated Safe, Drug Safes. Gun and home safe moving and
+          installation
+          service.Safes Guard is a well- equipped professional team that easily and neatly doing a fabulous job of
+          transportation and installation safes with such tools: commercial 16th foot box truck with hydraulic tailgate,
+          our custom designed high capacity hydraulic lift trailer ( rated for load more than 10,000 pounds ), Ultralift
+          stair-climbers, variety of pallet-jacks, commercial suction cups, burt pry bars, slick sticks and more.
+        </p>
+      </div>
+    </article>
+    <div class="container" style="padding-top: 30px;">
+      <div class="your-class">
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourcompany1.jpg">
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourcompany2.jpg" />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourcompany3.jpg" />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourcompany4.jpg" />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourcompany5.jpg" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <article style="padding-top: 200px;">
+      <h3><span class="underline">our team</span></h3>
+      <div class="scrolling">
+        <p class="content">
+          Sergey Kurguzov is the owner of SafeGuards who has extensive experience in moving and installation safes since
+          2013.
+          Sergey started his work in this field as a technical installer of safes in The Safes Keepers Company, Las
+          Vegas,
+          Nevada doing installation of commercial safes for casinos, medical safes for hospitals and drug storages, gun
+          safes
+          for police departments and weed dispensaries.<br>
+
+          Extremely expert skilled person with wide abilities to efficiently manage the schedule and consider workable
+          logistics
+          of safe deliveries, conclude an agreement with customers and provide on-time and dependable transportation. He
+          handles
+          the job professionally and guarantees courteous and accurate service for clients.<br>
+          In addition, Sergey demonstrates the ability to select and match the appropriate and perfect safes for every
+          individual customer that suits them. Depending on your needs he can:<br>
+          ■ find the suitable safe for your space room or office, garage or store;<br>
+          ■ suggest gun safe for your weapons including handguns or firearms, gun cabinets or pistol safes according
+          what
+          guns
+          you own;<br>
+          ■ you to choose affordable safe depending on your economic conditions and how much money you are ready to
+          invest
+          in
+          your security;<br>
+          ■ give you advice on how to buy the best qualitative safes production.<br>
+
+          We take care of you and it is our mission to leave the pleased customer so all of these hints from Sergey you
+          can use
+          later choosing a perfect safe for you in our online storage.<br>
+
+          Yehor Shytikov is our uniquely qualified e-comers who created the site California Safes for customers’
+          convenience and
+          fast use. He has worked with eBay, The Safes Keepers, Js Products so his previous experience made him very
+          organized
+          and creative in software development, but at the same time Yehor is a very diligent and efficient technical
+          installer
+          of safes. His understanding of mechanism and physical laws helps to do thoughtful and well-maintained safe
+          service.<br>
+
+          Ruslan Kurguzov is a well trained and knowledgeable worker who works side by side with his brother assisting
+          very
+          politely, efficiently and neatly. California Safes is proud to have such a persevering and hard-working person
+          who
+          also has a talent to converse with customers and explain in user-friendly format the process of safes moving
+          and
+          installation.
+        </p>
+      </div>
+    </article>
+    <div class="container" style="padding-top: 150px;">
+      <div class="your-class">
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourteam1.jpg">
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourteam2.jpg" />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourteam3.jpg" />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourteam4.jpg" />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourteam5.jpg" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <article style="padding-top: 200px">
+      <h3><span class="underline">our store</span></h3>
+      <div class="scrolling">
+        <p class="content">
+          Safe Guards offers its clients a big list of Format, Hollon gun safes that we have in online stock at a great
+          price.
+          California Safes provides a variety of Gun Safes and Lockers, Burglary Safes, Cash Safes, Commercial Safes,
+          Jewelry
+          Safes, Fire Resistant Safes, Used Safes, Business Safes and more. We understand every client is special and
+          unique with
+          their own taste and preference of design. Therefore our online storage has a variety of products with
+          different
+          colors,
+          size, weight and functions. But no matter what safe you choose, everyone has guaranteed quality and lifetime
+          warranty.<br>
+
+
+          Our customers are very important to us and we try to meet their needs.
+          When you choose and purchase your ideal safe in our online safe store we can deliver it for you at any
+          location
+          over the
+          whole Northern CA for additional charge ( San Francisco, San Jose, Oakland, Daly City, San Rafael, Santa
+          Clara,
+          Campbell, Cupertino, Sunnyvale, Los Gatos, Los Altos, Mountain View, Los Altos Hills, Palo Alto, Redwood City,
+          Menlo
+          Park, Woodside, Modesto, Santa Rosa, Novato, Sonoma, Concord, Lafayette, Richmond, Salinas, Walnut Creek,
+          Berkeley, San
+          Mateo, Fremont, Union City, Hayward, San Leandro, Castro Valley, Pleasanton, Dublin, Livermore, Tracy,
+          Sacramento,
+          Stockton, Antioch, Santa Cruz, Monterey, Hollister, Gilroy, Redding, Lake Tahoe and Yosemite Valley).
+        </p>
+      </div>
+    </article>
+    <div class="container" style="padding-top: 150px">
+      <div class="your-class">
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourstore1.jpg">
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourstore2.jpg" />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourstore3.jpg" />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourstore4.jpg"  />
+        </div>
+        <div>
+          <img class="image-responsive" src="./assets/images/about/ourstore5.jpg"  />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="footer">
+    <p class="content">408 987 5555</p>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.your-class').slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    });
+  </script>
+</body>
+
+</html>
