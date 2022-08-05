@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INVENTORY</title>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
@@ -19,306 +20,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@100&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 </head>
 <style>
-    article{
-      float: left;
-      padding-left: 100px;
-    }
-  
-    .container {
-  padding: 64px;
-}
+    * {
+     box-sizing: border-box;
+   }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both
-  
-}
-    h1 {
-      color: black;
-      font-size: 27pt;
-      font-weight: 800;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 2.2px;
-      text-align: left;
-    }
-    @media screen and (max-width:600px) {
-  h1{
-    font-size: 23pt;
-    display: block;
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 100%;
+    padding-left:0;
   }
 }
 
-    h2 {
-        color:black;
-        font-size: 25pt;
-        text-align: left;
+
+.listText {
         font-family: 'Roboto', sans-serif;
-        font-weight: light;
-        line-height: 48px;
-        float: left;
-        width: 30%;
+        font-size: 14px;
      }
-     @media screen and (max-width:600px) {
-  h2{
-    width: 90%;
-    font-size: 19pt;
-    display: block;
-    line-height: 38px;
+
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 8px 12px;
+  color: black;
+  background-color: #c3d6d9;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 14px;
+  font-size: 19px;
+  letter-spacing: 2.2px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+
+.card button:hover {
+  background-color: #a7bdc1;
+}
+@media screen and (max-width: 650px) {
+  .card {
+    width: 100%;
+
   }
 }
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
   
-    table#your-table-items {
-      border-collapse: collapse;
-      /* in inspector mode - easier to see the difference between collapse and no collapse */
-      border: 2px solid white(250, 249, 249, 0.75);
-      text-align: center;
-    }
-
-    table#your-table-items th:nth-child(1),
-    table#your-table-items td:nth-child(1) {
-      width: 35%;
-    }
-
-    table#your-table-items th:nth-child(2),
-    table#your-table-items td:nth-child(2) {
-      width: 20%;
-    }
-
-    table#your-table-items th:nth-child(3),
-    table#your-table-items td:nth-child(3) {
-      width: 30%;
-    }
-
-    table#your-table-items th:nth-child(4),
-    table#your-table-items td:nth-child(4) {
-      width: 15%;
-    }
-
-    table#your-table-items thead {
-      font-size: 0.7em;
-      text-transform: uppercase;
-    }
-
-    table#your-table-items thead th {
-      color: black;
-      background-color: #c3d6d9;
-      padding: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 100;
-      font-size: 16px;
-    }
-
-    table#your-table-items thead th:hover {
-      color: #fff;
-      background-color: #a7bdc1;
-      cursor: pointer;
-    }
-
-    table#your-table-items thead th.tablesorter-headerAsc,
-    table#your-table-items thead th.tablesorter-headerDesc {
-      background-color:#a7bdc1;
-    }
-
-    table#your-table-items tbody {
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px;
-      font-size: 0.9em;
-      line-height: 15px;
-    }
-
-    /*** make sure table#your-table-items tbody tr:nth-child(even) defined before table#your-table-items tbody tr:hover */
-    /*** otherwise, it would need to define table#your-table-items tbody tr:nth-child(even):hover*/
-    table#your-table-items tbody {
-      background: #c3d6d9;
-    }
-    table#your-table-items tbody tr:hover {
-      color: #fff;
-      background-color: #a7bdc1;
-    }
-
-    table#your-table-items tbody td {
-      padding: 8px 20px;
-      border-top: 2px solid white;
-      border-right: 2px solid white;
-    }
-
-    table#your-table-items tbody td img {
-      width: 100px;
-      margin: 0 10px 0 0;
-      border: 2px solid white;
-    }
-    @media screen and (max-width: 650px) {
-      article{
-        width: 100%;
-        padding-left: 30px;
-        padding-right: 0;
-      }
-    }
-
-    nav ul {
-      /* OR nav > ul --- ">" immediate after parent tag */
-      list-style: none;
-      margin: 0;
-    }
-
-    /* Ref: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after_style */
-    /* inserts something after the content */
-    /* if removed, the content of next tag will be right next to the nav bar */
-    nav ul::after {
-      /* OR nav > ul::after --- ">" immediate after parent tag */
-      content: "";
-      display: block;
-      clear: both;
-      /* The element is pushed below both left and right floated elements. Ref: https://www.w3schools.com/cssref/pr_class_clear.asp */
-    }
-
-    nav ul li a {
-      /* OR nav > ul > li > a --- ">" immediate after parent tag */
-      /* allows to set a width and height on the element, ref: https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1 */
-      display: inline-block;
-      color: black;
-      /* padding: top right bottom left */
-      padding: 10px 20px 10px 10px;
-      text-decoration: none;
-      width: auto;
-      font-family: 'Lato', sans-serif;
-      font-size: 15px;
-    }
-
-    nav ul li a:hover {
-      color: #c3d6d9;
-    }
-
-    /* top level */
-    nav>ul>li {
-      float: left;
-      /* make nav item align hortizontally */
-    }
-
-    #navLogo {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
-    a.logo {
-      width: 110px;
-      height: 100px;
-      display: block;
-      background: url(./assets/images/logo.svg) no-repeat 0 0;
-      /* 0 0 are x,y coordination in relation to width and height setting */
-      background-size: contain;
-    }
-
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    #navLeft {
-      padding-left: 30px;
-    }
-
-    #navRight {
-      padding-right: 30px;
-    }
-
-    #navDropdown {
-      display: none;
-    }
-
-    .dropdown {
-      display: block;
-      left: 0;
-    }
-
-    .dropbtn {
-      background-color: white;
-      color: black;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      line-height: normal;
-      padding-left: 60px;
-    }
-
-    .dropbtn:hover {
-      color:#c3d6d9;
-    }
-
-    .dropdown-content {
-      display: none;
-      /* set display to none, so dropdown menu won't show till hover dropdown */
-      position: absolute;
-      background-color: #c3d6d9;
-      min-width: 100%;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      /*z-index: 1;*/
-    }
-
-    .dropdown-content a {
-      color: #fff;
-      padding: 12px 16px;
-      font-size: 16pt;
-      font-family: 'Lato', sans-serif;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      line-height: normal;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #a7bdc1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown:hover {
-      background-color: #a7bdc1;
-    }
-
-    
-
-    @media screen and (max-width: 650px) {
-
-      #navLeft,
-      #navRight {
-        display: none;
-        /* hide the nav bar in small screen size */
-      }
-
-      #navDropdown {
-        display: block;
-        /* show dropdown menu and buttuon in small screen size */
-      }
-
-      .dropdown-content {
-        max-width: 650px;
-        /* set the dropdown-content width same as the @media screen width */
-      }
-
-      a.logo {
-        width: 90px;
-        height: 80px;
-        padding-left: 10px;
-
-      }
-    }
+ .fa{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: left;
+}
   </style>
 </head>
 
@@ -329,10 +91,10 @@
       <nav id="navLeft">
         <ul style="padding-left: 20px;">
           <li>
-            <a href="homepage.html" class="active">HOME</a>
+            <a href="index.html">HOME</a>
           </li>
           <li>
-            <a href="index.html">ABOUT</a>
+            <a href="aboutpage.html">ABOUT</a>
           </li>
           <li>
             <a href="blogpage.html">BLOG</a>
@@ -344,17 +106,17 @@
         <div class="dropdown">
           <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
           <div class="dropdown-content">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">BLOG</a>
-            <a href="#">SERVICES</a>
-            <a href="#">INVENTORY</a>
-            <a href="#">EXPERIENCE</a>
+            <a href="index.html">HOME</a>
+            <a href="aboutpage.html">ABOUT</a>
+            <a href="blogpage.html">BLOG</a>
+            <a href="servicespage.html">SERVICES</a>
+            <a href="inventorypage.html">INVENTORY</a>
+            <a href="experiencepage.html">EXPERIENCE</a>
           </div>
         </div>
       </nav>
       <!-- center logo -->
-      <nav id="navLogo"><a class="logo" href="#"></a></nav>
+      <nav id="navLogo"><a class="logo" href="index.html"></a></nav>
       <!-- horizontal right -->
       <nav id="navRight">
         <ul style="padding-left: 20px;">
@@ -362,7 +124,7 @@
             <a href="servicespage.html">SERVICES</a>
           </li>
           <li>
-            <a href="#">INVENTORY</a>
+            <a href="inventorypage.html">INVENTORY</a>
           </li>
           <li>
             <a href="experiencepage.html">EXPERIENCE</a>
@@ -370,15 +132,45 @@
         </ul>
       </nav>
     </div>
-    <div class="container" style="background-color:#f1f1f1;">
-      <div class="row">
-          <h1>OUR INVENTORY</h1>
-          <h2>
-            Here is our inventory. Check it out and contact us to get the qoute. We offer delivery and installation services.
-          </h2>
+  </header>
+  <div class="container" style="background-color:#f1f1f1;">
+    <div class="row">
+      <div class="column-33">
+        <h1>OUR SAFES</h1>
+        <h2>Here is our inventory. Check it out and contact us to <span class ="words-header">get a quote</span>. We offer delivery and installation services all over SF Bay Area.</h2>
+      </div>
+      <div class="column-66">
+        <h6 style="text-align:center; margin-top: 30px;">REQUEST A MOVING OR INSTALLATION QUOTE</h6>
+        <div class="form">
+          <form action="/action_page.php">
+
+        
+            <label for="fname" style="font-family:'Lato', san-serif; font-size: 16px;">Full Name</label>
+            <input type="text" id="lname" name="fullname" placeholder="Your full name..">
+
+            <label for="email" style="font-family:'Lato', san-serif; font-size: 16px;">Email</label>
+            <input type="text" id="lname" name="email" placeholder="Your email..">
+        
+        
+            <label for="country" style="font-family:'Lato', san-serif; font-size: 16px;">City</label>
+            <select id="country" name="country">
+              <option value="australia">San Francisco</option>
+              <option value="canada">Mountain View</option>
+              <option value="usa">San Jose</option>
+            </select>
+        
+            <label for="subject" style="font-family:'Lato', san-serif; font-size: 16px;">Describe</label>
+            <textarea id="subject" name="subject" style="font-family:'Roboto', san-serif; font-size: 14px; height: 200px;" placeholder="Give us more details about your move or installation..."></textarea>
+        
+            <input type="submit" value="submit">
+          </form>
+        </div>
       </div>
     </div>
-    <div class="container"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="column-66">
         <div>
           <table id="your-table-items" class="center">
             <thead>
@@ -466,13 +258,81 @@
                 <td>Browning Safe</td>
                 <td>24.00</td>
               </tr>
-    
+              <tr>
+                <td>
+                  <img src="./assets/images/safes/11.jpeg" alt="safes" />
+                </td>
+                <td>gun safe</td>
+                <td>Hollon Safe</td>
+                <td>14.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/images/safes/12.jpeg" alt="safes" />
+                </td>
+                <td>gun safe</td>
+                <td>Format Safe</td>
+                <td>18.00</td>
+              </tr>
             </tbody>
           </table>
         </div>
-    </article>
+      </div>
+      <div class="column-33">
+        <h5 style="text-align:center">RECOMMENDED SAFES</h5>
+        <div class="card">
+          <img src="./assets/images/safes/3.jpeg" alt="commercial safe" style="width:100%">
+          <h4>Format TL-15</h4>
+          <p class="price">$2499.99</p>
+          <ul class="listText">
+            <li>Commercial safe</li>
+            <li>½” thick steel body</li>
+            <li>1” thick steel door</li>
+            <li>UL listed lock</li>
+            <li>Universal hinges</li>
+            <li>Smooth paint finish</li>
+            <li>Adjustable shelving</li>
+            <li>Lifetime warranty</li>
+          </ul>
+          <p><button>add to cart</button></p>
+        </div>
+        <div class="card">
+          <img src="./assets/images/safes/6.jpeg" alt="home safe" style="width:100%">
+          <h4>Hollon PMTL-15</h4>
+          <p class="price">$1999.99</p>
+          <ul class="listText">
+            <li>Commercial safe</li>
+            <li>½” thick steel body</li>
+            <li>1” thick steel door</li>
+            <li>UL listed lock</li>
+            <li>Universal hinges</li>
+            <li>Smooth paint finish</li>
+            <li>Adjustable shelving</li>
+            <li>Lifetime warranty</li>
+          </ul>
+          <p><button>add to cart</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+  <div id="footer">
+    <div>
+      <h3 class style="font-size: 18px;"><span class="underline">contact us</span></h3>
+        <p style="font-family:'Lato', san-serif; font-size: 16px;">408 987 5555</p>
+        <p style="font-family:'Lato', san-serif; font-size: 16px;">safeguards@gmail.com</p>
+        <p style="font-family:'Lato', san-serif; font-size: 16px;">1040 Di Giulio Ave suite 300, Santa Clara, CA 95050</p>
+    </div>
+    <div>
+      <h3 class style="font-size: 18px;"><span class="underline">social media</span></h3>
+      <ul style="margin-left:0; padding-left:0;">
+          <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </ul>
+    </div>
+  </div>
   
-
+</body>
  <!-- jquery.min.js should be loaded before jquery.tablesorter.min.js because tablesorter requires basice jquery -->
  <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script type="text/JavaScript"
@@ -490,5 +350,5 @@
  <!-- END JavaScript -->
 
   </script>  
-</body>
+
 </html>

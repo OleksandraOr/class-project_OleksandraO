@@ -1,317 +1,62 @@
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@800&family=Roboto:wght@100;300&display=swap"
-    rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/stylesheets/lightbox.min.css" />
-  <title>EXPERIENCE</title>
-  <style>
-    * {
-  box-sizing:border-box;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/lightbox.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@800&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@800&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@100&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+  box-sizing: border-box;
 }
+h1 {
+    margin-top: 0;
+  }
+section.container {
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Roboto', 'Montserrat', sans-serif;
-}
-
-.container {
-  padding: 64px;
-}
-aside {
-  width: 30%;
-}
-
-
-.row {
+    section.content {
+        width: 55%;
+        float: left;
+        padding-left: 20px;
+    }
+    @media screen and (max-width:650px) {
+      section.content {
+        width: 85%;
+      }
+    }
+    .row {
     display: -ms-flexbox; /* IE 10 */
     display: flex;
     -ms-flex-wrap: wrap; /* IE 10 */
     flex-wrap: wrap;
     padding: 0 4px;
   }
-  
-  /* Create two equal columns that sits next to each other */
-  .column {
-    -ms-flex: 50%; /* IE 10 */
-    flex: 50%;
-    padding: 0 4px;
-  }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-  }
 
 
-h1 {
-      color: black;
-      font-size: 27pt;
-      font-weight: 800;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 2.2px;
-      text-align: left;
-    }
-    @media screen and (max-width:600px) {
-  h1{
-    font-size: 23pt;
-  }
+
+ .fa{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: left;
 }
+</style>
 
-    h2 {
-        color:black;
-        font-size: 25pt;
-        text-align: left;
-        font-family: 'Roboto', sans-serif;
-        font-weight: light;
-        line-height: 48px;
-        float: left;
-        padding-bottom: 58px;
-     }
-     @media screen and (max-width:600px) {
-  h2{
-    width: 100%;
-    font-size: 19pt;
-    display: block;
-    line-height: 38px;
-  }
-}
-
-.button {
-  border: none;
-  color: black;
-  padding: 14px 28px;
-  cursor: pointer;
-  background-color: #c3d6d9;
-  font-size: 19px;
-  letter-spacing: 2.2px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
-  text-align: center;
-  text-decoration: none;
-  margin-left: 100px;
-}
-a.button:hover {
-      background-color: #a7bdc1;
-      color:white;
-    }
-    @media screen and (max-width:600px) {
-  .button{
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .column-66,
-  .column-33,
-  .column-50 {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-    h2 {
-        color:black;
-        font-size: 25pt;
-        text-align: left;
-        font-family: 'Roboto', sans-serif;
-        font-weight: light;
-        line-height: 48px;
-        float: right;
-        padding-bottom: 100px;
-     }
-     @media screen and (max-width:600px) {
-  h2{
-    width: 80%;
-    font-size: 19pt;
-    display: block;
-    line-height: 38px;
-  }
-}
-.words-header {
-      letter-spacing: 3px;
-      font-style: italic;
-
-    }
-
-    nav ul {
-      /* OR nav > ul --- ">" immediate after parent tag */
-      list-style: none;
-      margin: 0;
-    }
-
-    /* Ref: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after_style */
-    /* inserts something after the content */
-    /* if removed, the content of next tag will be right next to the nav bar */
-    nav ul::after {
-      /* OR nav > ul::after --- ">" immediate after parent tag */
-      content: "";
-      display: block;
-      clear: both;
-      /* The element is pushed below both left and right floated elements. Ref: https://www.w3schools.com/cssref/pr_class_clear.asp */
-    }
-
-    nav ul li a {
-      /* OR nav > ul > li > a --- ">" immediate after parent tag */
-      /* allows to set a width and height on the element, ref: https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1 */
-      display: inline-block;
-      color: black;
-      /* padding: top right bottom left */
-      padding: 10px 20px 10px 10px;
-      text-decoration: none;
-      width: auto;
-      font-family: 'Lato', sans-serif;
-      font-size: 15px;
-    }
-
-    nav ul li a:hover {
-      color: #c3d6d9;
-    }
-
-    /* top level */
-    nav>ul>li {
-      float: left;
-      /* make nav item align hortizontally */
-    }
-
-    #navLogo {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
-    a.logo {
-      width: 110px;
-      height: 100px;
-      display: block;
-      background: url(./assets/images/logo.svg) no-repeat 0 0;
-      /* 0 0 are x,y coordination in relation to width and height setting */
-      background-size: contain;
-    }
-
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    #navLeft {
-      padding-left: 30px;
-    }
-
-    #navRight {
-      padding-right: 30px;
-    }
-
-    #navDropdown {
-      display: none;
-    }
-
-    .dropdown {
-      display: block;
-      left: 0;
-    }
-
-    .dropbtn {
-      background-color: white;
-      color: black;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      line-height: normal;
-      padding-left: 60px;
-    }
-
-    .dropbtn:hover {
-      color:#c3d6d9;
-    }
-
-    .dropdown-content {
-      display: none;
-      /* set display to none, so dropdown menu won't show till hover dropdown */
-      position: absolute;
-      background-color: #c3d6d9;
-      min-width: 100%;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      /*z-index: 1;*/
-    }
-
-    .dropdown-content a {
-      color: #fff;
-      padding: 12px 16px;
-      font-size: 16pt;
-      font-family: 'Lato', sans-serif;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      line-height: normal;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #7ab3bc
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown:hover {
-      background-color: #7ab3bc;
-    }
-
-    @media screen and (max-width: 650px) {
-
-      #navLeft,
-      #navRight {
-        display: none;
-        /* hide the nav bar in small screen size */
-      }
-
-      #navDropdown {
-        display: block;
-        /* show dropdown menu and buttuon in small screen size */
-      }
-
-      .dropdown-content {
-        max-width: 650px;
-        /* set the dropdown-content width same as the @media screen width */
-      }
-
-      a.logo {
-        width: 90px;
-        height: 80px;
-        padding-left: 10px;
-      }
-    }
-    .footer {
-     position: absolute;
-     left: 0;
-     bottom: 0;
-     width: 100%;
-     background-color: white;
-     color: black;
-     text-align: center;
-     height: 80px;
-     margin-top: 128px;
-    }
-  </style>
-</head>
 
 <body>
   <header>
@@ -320,10 +65,10 @@ a.button:hover {
       <nav id="navLeft">
         <ul style="padding-left: 20px;">
           <li>
-            <a href="homepage.html" class="active">HOME</a>
+            <a href="index.html">HOME</a>
           </li>
           <li>
-            <a href="index.html">ABOUT</a>
+            <a href="aboutpage.html">ABOUT</a>
           </li>
           <li>
             <a href="blogpage.html">BLOG</a>
@@ -335,17 +80,17 @@ a.button:hover {
         <div class="dropdown">
           <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
           <div class="dropdown-content">
-            <a href="homepage.html">HOME</a>
-            <a href="index.html">ABOUT</a>
+            <a href="index.html">HOME</a>
+            <a href="aboutpage.html">ABOUT</a>
             <a href="blogpage.html">BLOG</a>
-            <a href="#">SERVICES</a>
-            <a href="#">INVENTORY</a>
-            <a href="#">EXPERIENCE</a>
+            <a href="servicespage.html">SERVICES</a>
+            <a href="inventorypage.html">INVENTORY</a>
+            <a href="experiencepage.html">EXPERIENCE</a>
           </div>
         </div>
       </nav>
       <!-- center logo -->
-      <nav id="navLogo"><a class="logo" href="homepage.html"></a></nav>
+      <nav id="navLogo"><a class="logo" href="index.html"></a></nav>
       <!-- horizontal right -->
       <nav id="navRight">
         <ul style="padding-left: 20px;">
@@ -356,48 +101,126 @@ a.button:hover {
             <a href="inventorypage.html">INVENTORY</a>
           </li>
           <li>
-            <a href="#">EXPERIENCE</a>
+            <a href="experiencepage.html">EXPERIENCE</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="container">
-    <div class="row">
-      <div class="aside">
-        <h1>CHECK OUR WORK</h1>
+
+
+<!-- Photo Grid -->
+<section class="container">
+  <div class="aside">
+    <h1>CHECK OUR WORK</h1>
         <h2>Ten years’ experience of <span class ="words-header">diligent</span> and <span class ="words-header">courteous</span> work. Check how we move and deliver safes, look at our accurate installation and explore our store inventory.</h2>
-        <button class="button">subscribe</button>
+  </div>
+  <section class="content">
+    <div class="row"> 
+      <div class="column"> 
+        <a href="./assets/images/experience/1.jpg" data-lightbox="safe lock" data-title="changing lock">
+          <img src="./assets/images/experience/1.jpg" style="width:100%">
+        </a>
+        <a href="./assets/images/experience/4.jpg" data-lightbox="safe delivery" data-title="safe delivery">
+          <img src="./assets/images/experience/4.jpg" style="width:100%">
+        </a>
+        <a href="./assets/images/experience/9.jpg" data-lightbox="safe delivery" data-title="safe delivery">
+        <img src="./assets/images/experience/9.jpg" style="width:100%">
+        </a>
       </div>
       <div class="column">
-        <div>
-          <a href="./assets/images/experience/IMG_8784 2.jpg" data-lightbox="safe lock" data-title="changing lock ">
-             <img src="./assets/images/experience/IMG_8784 2.jpg" alt="safe lock" style="width:100%;">
-           </a>
-           <a href="./assets/images/experience/IMG_1603.jpg" data-lightbox="safe lock" data-title="changing lock ">
-            <img src="./assets/images/experience/IMG_1603.jpg" alt="safe lock" style="width: 100%;">
-          </a>
-          <a href="./assets/images/experience/IMG_0819.jpg" data-lightbox="safe lock" data-title="changing lock ">
-            <img src="./assets/images/experience/IMG_0819.jpg" alt="safe lock" style="width:100%;">
-          </a><br>
-          <a href="./assets/images/experience/IMG_8576 2.jpg" data-lightbox="safe lock" data-title="changing lock ">
-            <img src="./assets/images/experience/IMG_8576 2.jpg" alt="safe lock" style="width:100%;">
-          </a>
-        </div>  
+        <a href="./assets/images/experience/2.jpg" data-lightbox="safe installation" data-title="safe installation">
+          <img src="./assets/images/experience/2.jpg" style="width:100%">
+        </a>
+        <a href="./assets/images/experience/5.jpg" data-lightbox="safe delivery" data-title="safe delivery">
+         <img src="./assets/images/experience/5.jpg" style="width:100%">
+        </a>
+        <a href="./assets/images/experience/7.jpg" data-lightbox="safe removal" data-title="safe removal">
+         <img src="./assets/images/experience/7.jpg" style="width:100%">
+         </a>
+      </div>  
+      <div class="column" style="margin-bottom: 200px;">
+        <a href="./assets/images/experience/3.jpg" data-lightbox="safe delivery" data-title="safe delivery">
+         <img src="./assets/images/experience/3.jpg" style="width:100%">
+        </a>
+        <a href="./assets/images/experience/6.jpg" data-lightbox="safe delivery" data-title="safe delivery">
+         <img src="./assets/images/experience/6.jpg" style="width:100%">
+        </a>
+        <a href="./assets/images/experience/8.jpg" data-lightbox="safe delivery" data-title="safe delivery">
+        <img src="./assets/images/experience/8.jpg" style="width:100%">
+        </a>
       </div>
     </div>
+  </section>
+</section>
+
+<div id="footer">
+  <div>
+    <h3 class style="font-size: 18px;"><span class="underline">contact us</span></h3>
+      <p style="font-family:'Lato', san-serif; font-size: 16px;">408 987 5555</p>
+      <p style="font-family:'Lato', san-serif; font-size: 16px;">safeguards@gmail.com</p>
+      <p style="font-family:'Lato', san-serif; font-size: 16px;">1040 Di Giulio Ave suite 300, Santa Clara, CA 95050</p>
   </div>
- 
-  
-  <script type="text/JavaScript" src="assets/javascripts/lightbox-plus-jquery.min.js">
-    // Four images side by side
+  <div>
+    <h3 class style="font-size: 18px;"><span class="underline">social media</span></h3>
+    <ul style="margin-left:0; padding-left:0;">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </ul>
+  </div>
+</div>
+</body>
+
+
+<script type="text/JavaScript" src="assets/javascript/lightbox-plus-jquery.min.js">
+  // Four images side by side
 function four() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "25%";  // IE10
-    elements[i].style.flex = "25%";
+for (i = 0; i < elements.length; i++) {
+  elements[i].style.msFlex = "25%";  // IE10
+  elements[i].style.flex = "25%";
+}
+}
+
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
   }
 }
 
-  </script>
-</body>
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Three images side by side
+function three() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "33.33%";  // IE10
+    elements[i].style.flex = "33.33%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
 </html>

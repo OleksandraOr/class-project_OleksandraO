@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/fonts" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@800&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
@@ -19,381 +17,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@100&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <title>BLOG</title>
-<style>
-* {
-  box-sizing:border-box;
-}
+ <style>
+  * {
+     box-sizing: border-box;
+   }
+  
 
-body {
-  margin: 0;
-  font-family: 'Roboto', 'Montserrat', sans-serif;
-}
-
-.container {
-  padding: 64px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both
-}
-
-.column-33 {
-  float: left;
-  width: 33.33333%;
-  padding: 20px;
-}
-
-.column-66 {
-  float: left;
-  width: 66.66666%;
-  padding: 20px;
-}
-
-.column-50 {
-  float: left;
-  width: 50%;
-  padding: 20px;
-}
-
-h1 {
-      color: black;
-      font-size: 27pt;
-      font-weight: 800;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 2.2px;
-      text-align: left;
-    }
-    @media screen and (max-width:600px) {
-  h1{
-    font-size: 23pt;
-  }
-}
-
-    h2 {
-        color:black;
-        font-size: 25pt;
-        text-align: left;
-        font-family: 'Roboto', sans-serif;
-        font-weight: light;
-        line-height: 48px;
-        float: left;
-        padding-bottom: 58px;
-     }
-     @media screen and (max-width:600px) {
-  h2{
-    width: 100%;
-    font-size: 19pt;
-    display: block;
-    line-height: 38px;
-  }
-}
-
-.button {
-  border: none;
-  color: black;
-  padding: 14px 28px;
-  cursor: pointer;
-  background-color: #c3d6d9;
-  font-size: 19px;
-  letter-spacing: 2.2px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
-  text-align: center;
-  text-decoration: none;
-  margin-left: 100px;
-}
-
-    @media screen and (max-width:600px) {
-  .button{
-    margin-left: 0;
-  }
-}
-.btnStack {
-      background-color: #c3d6d9;
-      color: #000;
-      text-decoration: none;
-      display: inline-block;
-      padding: 8px 14px;
-      margin-bottom: 0;
-      margin-left: 100px;
-      font-size: 19px;
-      letter-spacing: 2.2px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 100;
-      line-height: 1.428571429;
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: middle;
-      cursor: pointer;
-      border: 1px solid transparent;
-      border-radius: 0px;
-     -webkit-user-select: none;
-     -moz-user-select: none;
-     -ms-user-select: none;
-     -o-user-select: none;
-      user-select: none;
-    
-    }
-    a.btnStack:hover {
-      background-color: #a7bdc1;
-      color:#000;
-    }
-    @media screen and (max-width: 600px) {
-      .btnStack {
-    margin-left: 0;
-  }
-  .video-container {
-    width: 100%;
-  }
-}
-.video-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-
-@media screen and (max-width: 600px) {
-  .column-66,
-  .column-33,
-  .column-50 {
-    width: 100%;
-    text-align: center;
-  }
-  .video-container {
-    width: 100%;
-  }
-}
-h3 {
-        font-family:'Roboto', sans-serif;
-        font-size: 21px;
-        padding-bottom: 20px;
-      }
-
-    .underline {
-        position:relative;
-    }
-   
-    .underline:after {
-       content: "";
-       position: absolute;
-       bottom: -7px;/*position the underline using left and bottom property*/
-       left: 0;
-       width: 40px;/* adjust the width of underline as you like*/
-       border-bottom: 1px solid;/* adjust the underline width and color as you like*/
-    }
-    .content {
+ .content {
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
         text-align: left;
         word-spacing: 2px;
         letter-spacing: 0.5px;
         padding-right: 20px;
+        margin-bottom: 40px;
     }
-
-    .accordion {
-            color: black;
-            cursor: pointer;
-            font-size: 19px;
-            letter-spacing: 2.2px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 100;
-            text-align: center;
-            padding-bottom: 10px;
-            background-color: #c3d6d9;
-            text-align: center;
-            padding: 10px 14px 10px 14px;;
-            margin-left: 300px;
-            margin-right: 300px;
-        }
-        @media screen and (max-width: 600px) {
-  .accordion {
-    text-align: center;
-    margin: 0%;
-  }
+    .fa{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: left;
 }
-        .active,
-        .accordion:hover {
-            color: white;
-        }
-       .panel {
-           display: none;
-           overflow: hidden;
-        }
-
-
-nav ul {
-      /* OR nav > ul --- ">" immediate after parent tag */
-      list-style: none;
-      margin: 0;
-    }
-
-    /* Ref: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after_style */
-    /* inserts something after the content */
-    /* if removed, the content of next tag will be right next to the nav bar */
-    nav ul::after {
-      /* OR nav > ul::after --- ">" immediate after parent tag */
-      content: "";
-      display: block;
-      clear: both;
-      /* The element is pushed below both left and right floated elements. Ref: https://www.w3schools.com/cssref/pr_class_clear.asp */
-    }
-
-    nav ul li a {
-      /* OR nav > ul > li > a --- ">" immediate after parent tag */
-      /* allows to set a width and height on the element, ref: https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1 */
-      display: inline-block;
-      color: black;
-      /* padding: top right bottom left */
-      padding: 10px 20px 10px 10px;
-      text-decoration: none;
-      width: auto;
-      font-family: 'Lato', sans-serif;
-      font-size: 15px;
-    }
-
-    nav ul li a:hover {
-      color: #c3d6d9;
-    }
-
-    /* top level */
-    nav>ul>li {
-      float: left;
-      /* make nav item align hortizontally */
-    }
-
-    #navLogo {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
-    a.logo {
-      width: 110px;
-      height: 100px;
-      display: block;
-      background: url(./assets/images/logo.svg) no-repeat 0 0;
-      /* 0 0 are x,y coordination in relation to width and height setting */
-      background-size: contain;
-    }
-
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    #navLeft {
-      padding-left: 30px;
-    }
-
-    #navRight {
-      padding-right: 30px;
-    }
-
-    #navDropdown {
-      display: none;
-    }
-
-    .dropdown {
-      display: block;
-      left: 0;
-    }
-
-    .dropbtn {
-      background-color: white;
-      color: black;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      line-height: normal;
-      padding-left: 60px;
-    }
-
-    .dropbtn:hover {
-      color:#c3d6d9;
-    }
-
-    .dropdown-content {
-      display: none;
-      /* set display to none, so dropdown menu won't show till hover dropdown */
-      position: absolute;
-      background-color: #c3d6d9;
-      min-width: 100%;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      /*z-index: 1;*/
-    }
-
-    .dropdown-content a {
-      color: #fff;
-      padding: 12px 16px;
-      font-size: 16pt;
-      font-family: 'Lato', sans-serif;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      line-height: normal;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #a7bdc1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown:hover {
-      background-color: #a7bdc1;
-    }
-
-    @media screen and (max-width: 650px) {
-
-      #navLeft,
-      #navRight {
-        display: none;
-        /* hide the nav bar in small screen size */
-      }
-
-      #navDropdown {
-        display: block;
-        /* show dropdown menu and buttuon in small screen size */
-      }
-
-      .dropdown-content {
-        max-width: 650px;
-        /* set the dropdown-content width same as the @media screen width */
-      }
-
-      a.logo {
-        width: 90px;
-        height: 80px;
-        padding-left: 10px;
-      }
-    }
-    .footer {
-     width: 100%;
-     background-color: rgb(255, 0, 0);
-     color: black;
-     text-align: center;
-     height: 40px;
-    }
-
 </style>
 </head>
 <body>
-
     <header>
         <div class="flex-container">
           <!-- horizontal left -->
           <nav id="navLeft">
             <ul style="padding-left: 20px;">
               <li>
-                <a href="index.html" class="#">HOME</a>
+                <a href="index.html">HOME</a>
               </li>
               <li>
                 <a href="aboutpage.html">ABOUT</a>
@@ -418,7 +76,7 @@ nav ul {
             </div>
           </nav>
           <!-- center logo -->
-          <nav id="navLogo"><a class="logo" href="#"></a></nav>
+          <nav id="navLogo"><a class="logo" href="index.html"></a></nav>
           <!-- horizontal right -->
           <nav id="navRight">
             <ul style="padding-left: 20px;">
@@ -437,79 +95,89 @@ nav ul {
     </header>
 
 
-<div class="container" style="background-color:#f1f1f1;">
-  <div class="row">
-    <div class="column-33">
-      <h1>LEARN WITH US</h1>
-      <h2>Find a lot of useful information and tips on our YouTube chanel: how to reset your safe lock combination, why do I need to bold down my safe and how to move a home safe and more...</h2>
-      <a href="https://www.youtube.com/c/TheSafeKeeper" target="_blank"class="btnStack">subscribe</a>
-    </div>
-    <div class="column-66">
-        <div class="video-container" style="padding-top: 30px; float: right; padding-left: 25px;">
-            <iframe width="800" height="515" float="right" padding-top= "130px" src="https://www.youtube.com/embed/zoAFtwBIC_I"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="container" style="background-color:#f1f1f1;">
+      <div class="row">
+        <div class="column-33">
+          <h1>LEARN WITH US</h1>
+          <h2 style="padding-bottom: 58px;">Find a lot of useful information and tips on our YouTube chanel: how to reset your safe lock combination, why do I need to bold down my safe and how to move a home safe and more...</h2>
+          <a href="https://www.youtube.com/c/TheSafeKeeper" target="_blank"class="btnStack">subscribe</a>
         </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container">
-  <div class="row">
-    <h1 style="padding-bottom:60px; padding-left: 20px;">CHECK OUR TUTORIALS</h1>
-    <div class="column-50">
-        <div class="video-container">
-          <iframe width="700" height="415" src="https://www.youtube.com/embed/rFaV2JMlimw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="column-66">
+            <div class="video-container" style="padding-top: 30px; float: right; padding-left: 25px;">
+                <iframe width="800" height="515" float="right" padding-top= "130px" src="https://www.youtube.com/embed/zoAFtwBIC_I"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-    </div>
-    <div class="column-50">
-      <h3 class><span class="underline">reset a lock combination</span></h3>
-        <p class="content">
-          If you’ve lost your combination and your lock has a serial number we can help you find instructions to reset the combination on your Set-Your-Own Combination Locks. Through this tutorial, it is easy to reset a safe combination lock. Changing safe combinations is required before using it to secure your valuables. These steps also work for sentry safe change dial combination.
-          Changing the combination on your LG electronic lock is very simple if you pay attention and follow the instructions. Just make sure you always change your combination with the safe door open and bolts retracted all the way. Never change your combination with the safe door closed. Another very useful thing to do is to have your new combination written in front of you due to time limit that is given when changing the combination. You must do it in a timely manner for the lock to receive the new code. after 30 seconds the LG Electronic lock will reset and you will have to start from step 1. Always keep your new combination hidden around the house because once the combination is changed, you are the only one who knows it. Enjoy!
-        </p>
-        <div class="panel">
-            <p class="content">Instructions:
-            ALWAYS PERFORM THIS OPERATION WITH THE DOOR OPEN
-            Enter “zero” six times
-            Enter your existing six (6) digit combination one time.
-            Enter your NEW six (6) digit combination two times.
-            If a mistake is made, wait thirty (30) seconds and repeat steps 1- 3.
-            Test lock operation several times before closing the door.
-            CAUTION: When selecting a combination do not use birthday or other predictable data that could give correlation between the user and combination.
-            Valid Combination Entry – Double signal after valid six (6) digit combination is entered.
-            Invalid Combination Entry – Triple signal indicates the old combination is still valid.</p>
-        </div>
-      <div class="accordion" style="text-align:center;">read more</div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="column-50">
-      <h3 class><span class="underline">bolt down your safe</span></h3>
-      <p class="content">
-        The best way to protect your valuables is to keep them in a safe that is out of sight and locked. For additional security, you can bolt the safe to your floor by securing it to a wood or concrete foundation with strong bolts. It is always a good idea to bolt down your gun safe no matter what it weighs. Even though it's very rare for a thief to steal a whole safe, tipping a safe over is a common practice. We use ⅜” Red Head Concrete Wedge Anchors for anchoring a safe to concrete floor. These awesome anchors will add 500 pounds of pressure per bolt. Our Hilti drills will make clean holes in any type of flooring and won’t crack your tile. Our professional safe installers will do a bolting of your safe to a wood or a concrete floor quickly, conveniently and without making a mess.</p>
-        <div class="panel">
-          <p class="content">Pick a spot. Make sure your safe is sitting in its final resting spot, any pallets or skids are removed and the safe is level. Any additional service besides bolting down a safe will incur extra charges.
-            Check for holes.Please ensure your safe comes with pre-drilled holes from the factory. Drilling any additional holes in a safe will temper with its fire rating, voiding the warranty. For this reason we can not drill your safe.
-            Get permission.If you do not own the residence where the safe is located, live in an apartment complex or leasing a business space, a written permission to drill will be required from the property owner.
-            Drill your mounting holes into the floor. Use the largest diameter drill bit that will fit through the mounting holes on the safe if you are bolting to concrete, but remember that you also need to purchase bolts that same diameter. If you are using toggle bolts, which are best for attaching the safe to a wood floor, you will need to drill a bigger hole than the diameter of the bolt to get the toggles through the flooring. In many cases, the toggle bolt packaging will tell you how big the hole needs to be.</p>
       </div>
-    <div class="accordion" style="text-align:center;">learn more</div>
     </div>
-    <div class="column-50">
-      <div class="video-container">
-        <iframe width="750" height="415" src="https://www.youtube.com/embed/XEs1fh3u6G4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-<footer>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <p style="font-family:'Lato', san-serif;">408 987 5555 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; safeguards@gmail</p>
-</footer>
 
+
+    <div class="container">
+      <div class="row">
+        <h1 style="padding-bottom:30px; padding-left: 20px;">CHECK OUR TUTORIALS</h1>
+        <div class="column-50">
+            <div class="video-container">
+              <iframe width="700" height="415" src="https://www.youtube.com/embed/rFaV2JMlimw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="column-50">
+          <h3 class style="margin-top: 0px; padding-top: 0px;"><span class="underline">reset a lock combination</span></h3>
+            <p class="content">
+              If you’ve lost your combination and your lock has a serial number we can help you find instructions to reset the combination on your Set-Your-Own Combination Locks. Through this tutorial, it is easy to reset a safe combination lock. Changing safe combinations is required before using it to secure your valuables. These steps also work for sentry safe change dial combination.
+              Changing the combination on your LG electronic lock is very simple if you pay attention and follow the instructions. Just make sure you always change your combination with the safe door open and bolts retracted all the way. Never change your combination with the safe door closed. Another very useful thing to do is to have your new combination written in front of you due to time limit that is given when changing the combination. You must do it in a timely manner for the lock to receive the new code. after 30 seconds the LG Electronic lock will reset and you will have to start from step 1. Always keep your new combination hidden around the house because once the combination is changed, you are the only one who knows it. Enjoy!
+            </p>
+            <div class="panel">
+                <p class="content">Instructions:
+                ALWAYS PERFORM THIS OPERATION WITH THE DOOR OPEN
+                Enter “zero” six times
+                Enter your existing six (6) digit combination one time.
+                Enter your NEW six (6) digit combination two times.
+                If a mistake is made, wait thirty (30) seconds and repeat steps 1- 3.
+                Test lock operation several times before closing the door.
+                CAUTION: When selecting a combination do not use birthday or other predictable data that could give correlation between the user and combination.
+                Valid Combination Entry – Double signal after valid six (6) digit combination is entered.
+                Invalid Combination Entry – Triple signal indicates the old combination is still valid.</p>
+            </div>
+          <div class="accordion" style="text-align:center;">read more</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="column-50">
+          <h3 class style="margin-top: 0px; padding-top: 0px;"><span class="underline">bolt down your safe</span></h3>
+          <p class="content">
+            The best way to protect your valuables is to keep them in a safe that is out of sight and locked. For additional security, you can bolt the safe to your floor by securing it to a wood or concrete foundation with strong bolts. It is always a good idea to bolt down your gun safe no matter what it weighs. Even though it's very rare for a thief to steal a whole safe, tipping a safe over is a common practice. We use ⅜” Red Head Concrete Wedge Anchors for anchoring a safe to concrete floor. These awesome anchors will add 500 pounds of pressure per bolt. Our Hilti drills will make clean holes in any type of flooring and won’t crack your tile. Our professional safe installers will do a bolting of your safe to a wood or a concrete floor quickly, conveniently and without making a mess.</p>
+            <div class="panel">
+              <p class="content">Pick a spot. Make sure your safe is sitting in its final resting spot, any pallets or skids are removed and the safe is level. Any additional service besides bolting down a safe will incur extra charges.
+                Check for holes.Please ensure your safe comes with pre-drilled holes from the factory. Drilling any additional holes in a safe will temper with its fire rating, voiding the warranty. For this reason we can not drill your safe.
+                Get permission.If you do not own the residence where the safe is located, live in an apartment complex or leasing a business space, a written permission to drill will be required from the property owner.
+                Drill your mounting holes into the floor. Use the largest diameter drill bit that will fit through the mounting holes on the safe if you are bolting to concrete, but remember that you also need to purchase bolts that same diameter. If you are using toggle bolts, which are best for attaching the safe to a wood floor, you will need to drill a bigger hole than the diameter of the bolt to get the toggles through the flooring. In many cases, the toggle bolt packaging will tell you how big the hole needs to be.</p>
+          </div>
+        <div class="accordion" style="text-align:center;">learn more</div>
+        </div>
+        <div class="column-50">
+          <div class="video-container">
+            <iframe width="750" height="415" src="https://www.youtube.com/embed/XEs1fh3u6G4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="footer">
+      <div>
+        <h3 class style="font-size: 18px;"><span class="underline">contact us</span></h3>
+          <p style="font-family:'Lato', san-serif; font-size: 16px; font-weight: 300;">408 987 5555</p>
+          <p style="font-family:'Lato', san-serif; font-size: 16px;font-weight: 300;">safeguards@gmail.com</p>
+          <p style="font-family:'Lato', san-serif; font-size: 16px;font-weight: 300;">1040 Di Giulio Ave suite 300, Santa Clara, CA 95050</p>
+      </div>
+      <div>
+        <h3 class style="font-size: 18px;"><span class="underline">social media</span></h3>
+        <ul style="margin-left:0; padding-left:0;">
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </ul>
+      </div>
+    </div>
 </body>
 <!-- BEG JavaScript -->
 <script>
